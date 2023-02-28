@@ -1,0 +1,154 @@
+.starter{
+    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/08/13/52658/plain-18.jpg);
+    color: white;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#name{
+    padding-left: 350px;
+}
+.starter2{
+    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/08/13/52658/plain-18.jpg);
+    display: flex;
+    justify-content: end;
+}
+#move{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 50px;
+    color: white;
+    text-decoration: none;
+}
+#move:hover{
+    color: rgb(161, 9, 9);
+}
+#myface{
+    width: 300px;
+    padding-left: 700px;
+}
+#red{
+    color: rgb(161, 9, 9);
+}
+#funny{
+    display: flex;
+    align-items: flex-end;
+    height: 720px;
+    width: 200px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+.moving{
+    
+    width: 200px;
+    position: absolute;
+    opacity: 0.0;
+}
+#hide{
+    background-color: white;
+    color: black;
+    border: none;
+}
+h2{
+    display: flex;
+    width: 200px;
+    border-bottom: 1px solid orange;
+   justify-content: center;
+}
+.about{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    margin-bottom: 100px;
+}
+.before{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#resume{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#btn1{
+    padding-top: 5px;
+    background-color: rgb(36, 36, 153);
+    color: white;
+    text-decoration: none;
+    width: 90px;
+    height: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.below{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#fix li{
+   margin-left: 40px;
+}
+#one{
+    background-color: white;
+    flex-direction: column;
+    justify-content: end;
+    width: 200px;
+    display: flex;
+    text-align: center;
+}
+.goal{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.project{
+    display: flex;
+   
+    flex-direction: column;
+}
+.wrap{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+#frame{
+    width: 50%;
+    height: 1000px;
+}
+.display{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 200px;
+}
+.inside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#pro{
+    background-color: rgb(36, 36, 153);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+}
+.display2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

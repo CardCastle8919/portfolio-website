@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            color: #555;
+            font-family: 'Lato',sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            text-rendering: optimizeLegibility;
+        }
+        .header {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                                url(./Omnifood\ Contents/hero.jpg);
+            background-size: cover;
+            height: 100vh;
+            background-attachment: fixed;
+            
+        }
+        .row{
+            max-width: 1140px;
+            margin: 0 auto;
+           
+        }  
+        .logo{
+            height: 100px;
+            width: 100px;
+            float: left;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        ul{
+            display:flex ;
+            list-style-type: none;
+        }
+        li a{
+            color: white;
+            padding: 5px 0;
+            margin: 0 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        li a:hover{
+            border-bottom: 2px solid orange;
+        }
+        .hero-text-box{
+            width: 1140px;
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%,-50%);
+            color: white;
+           font-size: 36px;
+        }
+        h1{
+            font-size: 240%;
+        } 
+        .btn{
+            display: inline-block;
+            padding: 10px 30px;
+            font-weight: 300;
+            text-decoration: none;
+            border-radius: 200px;
+            color: #fff;
+        }
+        .btn:hover,.btn:active{
+            background-color: #cf6d17;
+        }
+       
+        .btn-full{
+            background-color: #e67e22;
+            border: 1px solid #e67e22;
+            color: #fff;
+        }
+        .btn-ghost{
+            border: 1px solid;
+            color: #e67e22;
+            transition: color 0.2s;
+        } 
+        .btn-full:hover,.btn-full:active{
+            border: 1px solid #cf6d17;    
+            color: #555;
+        }
+        .btn-ghost:hover, .btn-ghost:active{
+            border: 1px solid #cf6d17;
+            color: #fff;
+        }
+        h2{
+            text-align: center;
+            font-size: 100%;
+            font-weight: 300;
+            word-spacing: 2px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        h2:after{
+            display: block;
+            height: 2px;
+            width: 100px;
+            background-color: #e67e22;
+            content: " ";
+            margin: auto;
+            margin-top: 30px;
+        }
+        .feature-text{
+            width: 800px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .features{
+            padding: 80px;
+        }
+        .cards{
+            display: flex;
+            justify-content: stretch;
+            margin: 30px;
+            align-items: center;
+        }
+        .cards p{
+            text-align: justify;
+            font-size: 90%;
+            line-height: 150%;
+            padding: 10px;
+            align-items: center;
+        }
+        .bigicon{
+            font-size: 350%;
+            color: #e67e22;
+            --ionicon-stroke-width:20px;
+        }
+        .meal{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+.meal img{
+    width:100%;
+    height: auto;
+    opacity: 0.7;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+.meal img:hover{
+    opacity: 1;
+    transform: scale(1.00);
+}
+.three{
+    display: flex;
+    justify-content: center;
+}
+.row2{
+            max-width: 1140px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+#one{
+    padding-top: 70px;
+}
+.space{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+.one{
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 50px 0;
+}
+#phone{
+    width: 40%;
+        
+}
+.num{
+   display: flex;
+   justify-content: space-between;
+}
+#num{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    width: 54px;
+    min-width: 54px;
+    height: 54px;
+    min-height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    margin-right: 20px;
+}
+.part1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    height: 60vh;
+}
+.btn-app:link,
+.btn-app:visited{
+    border: 0;
+}
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+    margin-left: 90px;
+    margin-top: 50px;
+}
+.part2{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.smallicon{
+    color: #e67e22;
+    --ionicon-stroke-width:20px;
+    
+}
+.btn1{
+    text-decoration: none;
+    border-bottom:1px solid #e67e22;
+    border-left: #fff;
+    border-top: #fff;
+    border-right: #fff;
+    background-color: #fff;
+    color: #e67e22;
+    transition: border-bottom 0.2s, color 0.5s;
+}
+.btn1:hover{
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+.any{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+.place{
+    width: 200px;
+}
+.part3{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1140px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
+.four{
+    display: flex;
+    flex-direction: column;
+
+}
+.five{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                                url(./Omnifood\ Contents/back-customers.jpg);
+    color: #fff;
+    padding-top: 50px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-attachment: fixed;
+}
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+blockquote:before{
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+.reviews{
+    border-radius: 50%;
+    width: 3em;
+}
+.price{
+    color: #cf6d17;
+}
+.price span{
+    font-size: 50px;
+}
+.smallericon{
+    color: #e67e22;
+}
+.holder{
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    
+}
+.card{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: 0 2px 2px #cac5c5;
+}
+.help{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1140px;
+}
+.signup{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.btn3{
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+    width: 140px;
+}
+.btn3:hover{
+    background-color: #cf6d17;
+    
+}
+.finale{
+    background-color: black;
+    margin-top: 50px;
+    font-family: 'Lato',sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    padding-bottom: 40px;
+}
+.btn4{
+    color: #555;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 20px;
+}
+.btn4:hover{
+    color: white ;
+}
+.end{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+#end{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+.btn5{
+    color: #555;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 30px;
+}
+.btn5:hover{
+    color: rgb(46, 46, 150);
+}
+.btn6{
+    color: #555;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 30px;
+}
+.btn6:hover{
+    color: rgb(42, 218, 218);
+}
+.btn7{
+    color: #555;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 30px;
+}
+.btn7:hover{
+    color: rgb(146, 47, 47);
+}
+.eight{
+    width: 500px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 20px
+}
+
+</style>
+    
+</head>
+<body>
+    <header class="header" >
+        <nav class="row">
+            
+                <img src="./Omnifood Contents/logo-white.png" alt="" class="logo">
+                <ul class="navagate">
+                    <li><a href="#">Food for delivery</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">our cities</a></li>
+                    <li><a href="#">sign up</a></li>
+                </ul>
+           
+        </nav>
+
+        <div class="hero-text-box">
+            <h1>Goodbye junk food. <br> hello super healthy meals </h1>
+            <br>
+            <a href="#"class="btn btn-full">I'm Hungry</a>
+            <a href="#" class="btn btn-ghost">Show me more</a>
+        </div>
+    </header>
+    <section class="features">
+        <div class="row">
+        <div >
+            <h2>Get food fast -- not fast food</h2>
+            <p class="feature-text">He llo, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!</p>
+        </div>
+
+ 
+            <div class="row cards">
+            <div>
+                <ion-icon name="calendar-outline" class="bigicon"></ion-icon>
+                <h3>up to 365 days a year</h3>
+                <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.</p>
+             </div>
+                <div>
+                    <ion-icon name="timer-outline" class="bigicon"></ion-icon>
+                    <h3>ready in 20 minutes</h3>
+                    <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
+                </div>
+                <div>
+                    <ion-icon name="leaf-outline" class="bigicon"></ion-icon>
+                    <h3>100% organic</h3>
+                    <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
+                </div>
+                <div>
+                    <ion-icon name="checkmark-done-outline" class="bigicon"></ion-icon>
+                    <h3>order anything</h3>
+                    <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!</p>
+                </div>
+             </div>
+    </section>
+    <div class = "three">
+        <div class="meal">
+            <img src="./Omnifood Contents/1.jpg" alt="">
+        </div>
+        <div class="meal">
+            <img src="./Omnifood Contents/2.jpg" alt="">
+        </div>
+        <div class="meal">
+            <img src="./Omnifood Contents/3.jpg" alt="">
+        </div>
+        <div class="meal">
+            <img src="./Omnifood Contents/4.jpg" alt="">
+        </div>
+    </div>
+    <div class = "three"> 
+        <div class="meal">
+            <img src="./Omnifood Contents/5.jpg" alt="">
+        </div>
+        <div class="meal">
+            <img src="./Omnifood Contents/6.jpg" alt="">
+        </div>
+        <div class="meal">
+            <img src="./Omnifood Contents/7.jpg" alt="">
+        </div>
+        <div class="meal">
+            <img src="./Omnifood Contents/8.jpg" alt="">
+        </div>
+    </div> 
+    
+   <div class="space">
+        <h2 id="one">HOW IT WORKS — SIMPLE AS 1, 2, 3</h2>
+        <div class="part1"> 
+            <div class="one">
+                <img src="./Omnifood Contents/app-iPhone.png" alt="" id="phone">
+            </div>
+            <div class="any">
+                <div class="num">
+                    <div id="num">1</div>
+                    <p>Choose the subscription plan that best fits your needs and sign up today.</p>
+                </div>
+        
+                <div class="num">
+                    <div id="num">2</div>
+                    <p>Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+                </div>
+        
+                <div class="num">
+                    <div id="num">3</div>
+                    <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
+                </div> 
+                <div>
+                    <a href="#" class="btn-app"><img src="./Omnifood Contents/download-app.svg" alt=""></a>
+                    <a href="#" class="btn-app"><img src="./Omnifood Contents/download-app-android.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div>
+    <h2 id="one">WE'RE CURRENTLY IN THESE CITIES</h2>
+   </div>
+   <div class="part3">
+    <div class="four">
+        <img src="./Omnifood Contents/lisbon-3.jpg" alt="" class="place">
+        <h3>lisbon</h3>
+    <div ><ion-icon name="person-outline" class="smallicon"></ion-icon>1600+ happy eaters</div>
+    <div ><ion-icon name="star-half-outline"class="smallicon"></ion-icon> 60+ top chefs</div>
+    <div ><ion-icon name="logo-twitter" class="smallicon"></ion-icon><button class="btn1">@omnifood_lx</button> </div>
+    </div>
+    <div class="four">
+        <img src="./Omnifood Contents/san-francisco.jpg" alt=""  class="place">
+        <h3>san franisco</h3>
+    <div ><ion-icon name="person-outline" class="smallicon"></ion-icon>3700+ happy eaters</div>
+    <div ><ion-icon name="star-half-outline"class="smallicon"></ion-icon>  160+ top chefs</div>
+    <div ><ion-icon name="logo-twitter" class="smallicon"></ion-icon><button class="btn1">@omnifood_sf</button> </div>
+    </div>
+    <div class="four">
+        <img src="./Omnifood Contents/berlin.jpg" alt=""  class="place">
+        <h3>berlin</h3>
+    <div ><ion-icon name="person-outline" class="smallicon"></ion-icon> 2300+ happy eaters</div>
+    <div ><ion-icon name="star-half-outline"class="smallicon"></ion-icon>  110+ top chefs</div>
+    <div ><ion-icon name="logo-twitter" class="smallicon"></ion-icon><button class="btn1">@omnifood_berlin</button> </div>
+    </div>
+    <div class="four">
+        <img src="./Omnifood Contents/london.jpg" alt="" class="place">
+        <h3>london</h3>
+    <div ><ion-icon name="person-outline" class="smallicon"></ion-icon> 2300+ happy eaters</div>
+    <div ><ion-icon name="star-half-outline"class="smallicon"></ion-icon>  110+ top chefs</div>
+    <div ><ion-icon name="logo-twitter" class="smallicon"></ion-icon><button class="btn1">@omnifood_london</button> </div>
+    </div>
+   </div>
+   <div class="five">
+    <div>
+        <h2>OUR CUSTOMERS CAN'T LIVE WITHOUT US</h2>
+        <div style="display:flex;justify-content:center; font-style: italic;">
+            <div style="margin-right: 50px; margin-left: 50px; margin-top: 50px;">
+                <div class="blockqoute"><h1>&#8220;</h1>
+                </div>
+                <div class="blockqoute">Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!</div>
+                <div><img src="./Omnifood Contents/customer-1.jpg" alt="" class="reviews"></div>
+            </div>
+            <div style="margin-right: 50px; margin-left: 50px; margin-top: 50px;">
+                <div class="blockqoute:before"><h1>&#8220;</h1>
+                </div>
+                <div class="blockqoute">Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</div>
+                <div><img src="./Omnifood Contents/customer-2.jpg" alt="" class="reviews"></div>
+            </div>
+            <div style="margin-right: 50px; margin-left: 50px; margin-top: 50px;">
+                <div class="blockqoute:before"><h1>&#8220;</h1>
+                </div>
+                <div class="blockqoute">I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!</div>
+                <div><img src="./Omnifood Contents/customer-3.jpg" alt="" class="reviews"></div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<div class="holder">
+    <div style="margin-top: 50px;">
+        <h2>START EATING HEALTHY TODAY</h2>
+        <div class="help" style=" background-color: #f4f4f4;">
+            <div class="card" style="box-shadow: 0 2px 2px #cac5c5; border-bottom: 1px solid #e8e8e8">
+                <div style="background-color: #fcfcfc;">
+                    <h5>Premium</h5>
+                    <p class="price"><span >$399</span>/month</p>
+                    <p>That's only 13.30$ per meal</p>
+                </div>
+                <div style="border-top:  1px solid #e8e8e8; padding-top: 20px; padding-bottom: 20px;">
+                    <ul style = "display: block; background-color: #f4f4f4;">
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>1 meal everyday</li>
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>order 24/7</li>
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>Access to newest creations</li>
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>Free delivery</li>
+                    </ul>
+                </div>
+                <div style="border-top:  1px solid #e8e8e8; padding-top: 20px; padding-bottom: 20px;background-color: #fcfcfc;display: flex;justify-content: center;">
+                    <a href="#"class="btn btn-full">sign up</a>
+                </div>
+            </div>
+            <div class="card" style="box-shadow: 0 2px 2px #cac5c5; border-bottom: 1px solid #e8e8e8">
+                <div style="background-color: #fcfcfc;">
+                    <h5>Pro</h5>
+                    <p class="price"><span >$149</span>/month</p>
+                    <p>That's only 14.90$ per meal</p>
+                </div>
+                <div style="border-top:  1px solid #e8e8e8; padding-top: 20px; padding-bottom: 20px;">
+                    <ul style = "display: block; background-color: #f4f4f4;">
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>1 meal 10 days/month</li>
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>order 24/7</li>
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>Access to newest creations</li>
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>Free delivery</li>
+                    </ul>
+                </div>
+                <div style="border-top:  1px solid #e8e8e8; padding-top: 20px; padding-bottom: 20px;display: flex;justify-content: center;">
+                    <a href="#"class="btn btn-ghost">sign up</a>
+                </div>
+            </div>
+            <div class="card" style="box-shadow: 0 2px 2px #cac5c5; border-bottom: 1px solid #e8e8e8">
+                <h5>Starter</h5>
+                <p class="price"><span >$19</span>/meal</p>
+                <div style="border-top:  1px solid #e8e8e8; padding-top: 20px; padding-bottom: 40px;">
+                    <ul style = "display: block; background-color: #f4f4f4;">
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>1 meal</li>
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>order from 8 an to 12 pm</li>
+                        <li><ion-icon name="close-outline" class="smallericon"></ion-icon></li>
+                        <li><ion-icon name="checkmark-outline" class="smallericon"></ion-icon>Free delivery</li>
+                    </ul>
+                </div>
+                <div style="border-top:  1px solid #e8e8e8; padding-top: 20px; padding-bottom: 20px ; display: flex;justify-content: center;">
+                    <a href="#"class="btn btn-ghost">sign up</a>
+                </div>
+            </div>
+        </div> 
+    </div> 
+</div>
+    <div style="padding: top 30px; padding-top:50px ; ">
+        <h2>WE'RE HAPPY TO HEAR FROM YOU</h2>
+        <div class="signup">
+            <div style="margin-top: 50px;">
+                <form action="">
+                    <label for=""  style=" padding-right: 300px;">name</label>
+                    <input type="text" placeholder="your name" class="eight">
+                    <br>
+                    <label for=""  style=" padding-right: 301px;">email</label>
+                    <input type="email" placeholder="Your email" class="eight">
+                    <br>
+                    <label for=""  style=" padding-right: 186px;">how did you find us</label>
+                    <select name="" id="" class="eight">
+                        <option value="">friends</option>
+                        <option value="">search engine</option>
+                        <option value="">advertisement</option>
+                        <option value="">other</option>
+                    </select>
+                    <br>
+                    <label for=""   style=" padding-right: 250px;">Newsletter</label>
+                    <input type="checkbox" checked>
+                    <label for="">yes please</label>
+                    <br>
+                    <label for="" >drop us a line</label>
+                    <br>
+                    <textarea name="" id="" cols="30" rows="10" style=" margin-left: 350px;"placeholder="your message" class="eight"></textarea>
+                    <br>
+                    <a href="#" class="btn3" style="display:flex; margin-top: 20px; margin-left: 350px;  ">Send it!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="finale">
+        <div class="end">
+            <div>
+                <a href="#" class="btn4">About us</a>
+                <a href="#" class="btn4">Blog</a>
+                <a href="#" class="btn4">Press</a>
+                <a href="#" class="btn4">iOS App</a>
+                <a href="#" class="btn4">Android</a>
+            </div>
+            <div>
+                <a href="#" class="btn5"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#" class="btn6"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#" class="btn7"><ion-icon name="logo-youtube"></ion-icon></a>
+                <a href="#" class="btn5"><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+        </div>
+        <div id="end">
+            <h4>This webpage was created for the course "Design and Develop a Killer Website Using HTML5 and CSS3" by Jonas Schmedtmann. No copyrights here. <br>
+                This webpage is for you! So go and do whatever you want with it and have fun.</h4>
+               
+        </div>
+        <div id="end">
+            <h4>Build with in the beautiful city of Lisbon, Portugal, March 2015.</h4>
+        </div> 
+    </div>
+</body>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</html>

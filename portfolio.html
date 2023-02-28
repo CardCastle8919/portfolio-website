@@ -1,0 +1,142 @@
+<!-- jonathan colton only works in fullscreen because of image issue -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var x = 0;
+            $("#hide").click(function(){
+                if(x > 0){
+                    $(".moving").slideDown();
+                }
+                $(".moving").animate({opacity: '1.0'}, 2500); 
+                $(".moving").delay(2500).slideUp();
+                $(".moving").css('opacity', '0.0');
+                x++;
+            });       
+        });
+    </script>
+</head>
+<body>
+    <div class="starter2">
+        <div >
+            <a href="#funny" id="move">Home</a>
+            <a href="#one" id="move">About me</a>
+            <a href="#two" id="move">My goals</a>
+            <a href="#three" id="move">Projects</a>
+            <a href="#four" id="move">Career summary</a>
+            <a href="#five" id="move">Contact</a>
+        </div>
+        
+    </div>
+    <div class="starter">
+        <div id="funny">
+            <img src="./DA789B87-2C05-4FD6-B1D7-9A8EB213F5D4.png" alt="" class="moving">
+        </div>    
+        <div id="name">
+            <h3 id="red">Hi I am</h3>
+            <h1>Jonathan Colton</h1>
+            <br>
+            <p>Hello, I'm Jonathan Colton, college student who is enrolled as <br> a CSET major at Thaddeus Stevens College of Technology</p>
+        </div>
+            <div>
+                <img src="./IMG_2847.jpg" alt=""id="myface">
+            </div>
+    </div>
+
+        
+    <div class="suround" style="background-color: gray; padding-bottom: 25px;">
+        <button id="hide">Press me for secret</button>
+        <div class="before">
+            <h2 id="one" style="background-color: gray;">About me</h2>
+        </div>
+        <div class="about" style="margin-top: 100px; ">
+            <div  style="box-shadow: 0 2px 2px #cac5c5; border-bottom: 1px solid #e8e8e8; height: 150px; background-color: white;border-radius: 20px">
+                <h3 style="margin-bottom: 10px; width: 200px; text-align:center">Coding languages</h3>
+                <div >
+                    <ul id="fix">
+                        <li>javascript</li>
+                        <li>html</li>
+                        <li>css</li>
+                        <li>python</li>
+                    </ul>
+                </div>
+            </div>
+            <div  style="box-shadow: 0 2px 2px #cac5c5; border-bottom: 1px solid #e8e8e8; height: 150px; background-color: white;border-radius: 20px">
+                <h3 style="margin-bottom: 10px; width: 200px; text-align:center">What I am doing now</h3>
+                <p style="text-align: center;">I am currently learning and <br> studying in the CSET course <br> at Thaddeus Stevens college <br> of Technology</p>
+            </div>
+            <div  style="box-shadow: 0 2px 2px #cac5c5; border-bottom: 1px solid #e8e8e8; height: 150px;background-color: white;border-radius: 20px">
+                <h3 style="margin-bottom: 10px; text-align:center"> about me</h3>
+                <p style="text-align: center;">I grew up in downingtown<br> Pennslyvania.  I gratuated from<br> Collegium Charter  School. I have <br>done coding groups  when I was<br> with 4h center that tackled differnet <br> issues with small robots </p>
+            </div>
+        </div>    
+        <div class="below" style="margin-bottom: 100px;">
+            <div style="box-shadow: 0 2px 2px #cac5c5; border-bottom: 1px solid #e8e8e8; height: 150px; text-align: center; padding-top: 10px;margin-left: 250px;background-color: white;border-radius: 20px">
+                <h3>Why I choose the CSET program</h3>
+                <p>I have always been interested in <br> coding and programming and <br> got involved with groups like <br> 4h that had teams were people <br> work together or figured out <br> the problems themselves</p>
+            </div>
+            <div id="resume"  style="box-shadow: 0 2px 2px #cac5c5; border-bottom: 1px solid #e8e8e8; height: 70px; width: 110px; text-align: center; margin-right: 300px;background-color: white; padding-top: 40px;padding-left: 40px;padding-right: 40px;padding-bottom: 40px; border-radius: 20px;">
+                <h3 style="margin-bottom: 10px;">Resume</h3>
+                <a href="./Resume for Jonathan Colton.pdf" id="btn1"><ion-icon name="download-outline" id="download"></ion-icon>Resume</a>
+            </div>
+        </div>
+    </div>
+    <div class="goal" style="margin-top: 25px;">
+        <h2 id="two">My Goals</h2>
+        <div style="margin-top: 30px; margin-bottom: 70px;">
+            <p style="box-shadow: 0 2px 2px #cac5c5; border-bottom: 1px solid #e8e8e8;padding-left: 20px;padding-right: 20px;padding-top: 20px;padding-bottom: 20px;">
+                My goals are to become better at coding while also learning and improving my weaker areas when coding. <br> I want to also learn more coding languages so that when asked to do something I know Ill be able to do it <br> while also knowing that I am a great attribute to the company.
+            </p>
+        </div>
+    </div>
+    <div class="project"style="margin-bottom: 100px; align-items: center; display: flex; justify-content: center;">
+                <h2 id="three">My projects</h2>
+    </div>
+    <div class="display">
+        <div class="inside">
+            <h2>Project 1</h2>
+            <div style="margin-top: 50px;">
+                <a href="./websitelect6&7/websitrcopy.html" id="pro">Project 1 link</a>
+            </div>
+        </div>  
+        <div class="inside">
+            <h2>Project 2</h2>
+            <div style="margin-top: 50px;">
+                <a href="./cake project/110stuff.html" id="pro">Project 2 link</a>
+            </div>
+        </div>
+    </div>    
+    <div>
+         <div class="wrap">
+             <iframe src="./websitelect6&7/websitrcopy.html" frameborder="0"id="frame"></iframe>
+            <iframe src="./cake project/110stuff.html" frameborder="0"id="frame"></iframe>
+        </div>
+    </div>
+    <div class="display2" style="margin-top: 200px;">
+        <h2 id="four">Career summary</h2>
+        <div style="box-shadow: 0 2px 2px #cac5c5; border-bottom: 1px solid #e8e8e8; ; background-color: white;border-radius: 20px; margin-top: 30px; padding: 30px;">
+            <p >I worked at a Regal Theater for a year and half as a floor staff worker</p>
+            <p>The skills it touaght me</p>
+            <ul>
+                <li>team work</li>
+                <li>How to deal with all sorts of people all at one</li>
+                <li>communication</li>
+                <li>how to be a leader</li>
+            </ul>
+        </div>
+    </div>
+    <div class="display2" style="margin-top: 200px;">
+        <h2 id="five">Contact me</h2>
+        <p style="margin-top: 30px;">phone number: 484-983-4881</p>
+        <p style="margin-bottom: 70px;">Email:jonathankcolton@gmail.com</p>
+    </div>
+</body>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</html>
